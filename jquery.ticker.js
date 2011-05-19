@@ -1,6 +1,9 @@
 /* List Ticker by Alex Fish 
 // www.alexefish.com
 //
+// Modifications by Matt Cegielka
+// https://bitbucket.org/budrick/jquery-ticker
+//
 // options:
 //
 // effect: fade/slide
@@ -21,6 +24,7 @@
       
       var obj = $(this);
       var list = obj.children();
+      if (list.length < 2) return;
       list.not(':first').hide();
       
       setInterval(function(){
@@ -46,3 +50,4 @@
     });
   };
 })(jQuery);
+
